@@ -1,5 +1,6 @@
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import Display from "./layouts/Display/Display";
 import LeftContainer from "./layouts/LeftContainer/LeftContainer";
 
 
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <main className="flex flex-wrap justify-center items-center flex-grow bg-gray-100 px-10 md:flex-nowrap">
         <LeftContainer />
-        {/* <Display /> */}
+        <Display />
 
       </main>
       <Footer />

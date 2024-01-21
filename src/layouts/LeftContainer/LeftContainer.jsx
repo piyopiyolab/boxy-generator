@@ -30,7 +30,7 @@ function LeftContainer() {
             </button>
           ))}
         </div>
-        <div className="">
+        <div className="h-full overflow-auto">
 
           {tabsList[tabs].component}
         </div>

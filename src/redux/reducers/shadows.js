@@ -55,6 +55,7 @@ export const shadowSlice = createSlice({
     initialState,
     reducers: {
         removeShadow: (state, action) => {
+            console.log("remove")
 
         },
         addShadow: (state, action) => {
@@ -107,9 +108,37 @@ export const shadowSlice = createSlice({
         },
         updateShadowValue: (state, action) => {
 
+
+
+            return state.map(shadow => {
+                if (shadow.id === action.payload.shadowID) {
+                    return {
+                        ...shadow,
+                        inputs: shadow.inputs.map(input => {
+                            if (input.inputNumber === action.payload.inputNumber) {
+                                return {
+                                    ...input,
+                                    value: action.payload.value
+                                };
+                            }
+                            return input;
+                        })
+                    };
+                }
+                return shadow;
+            });
+
+
+
+
+
         },
         updateCheckbox: (state, action) => {
 
+            const currentShadow = state.find(
+                shadow => shadow.id === action.payload.shadowID
+            )
+            currentShadow[action.payload.name] = !currentShadow[action.payload.name]
         },
 
     }
