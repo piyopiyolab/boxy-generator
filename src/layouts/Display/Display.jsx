@@ -1,5 +1,5 @@
 import Modal from "./Modal/Modal"
-
+import getBoxShadowValue from "../../utils/getBoxShadowValue"
 
 
 function Display() {
