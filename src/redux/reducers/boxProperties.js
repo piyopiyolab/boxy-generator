@@ -9,7 +9,7 @@ const initialState = [
         value: 25,
         type: "range",
         minMax: [0, 250],
-        slice: "boxProperties",
+
 
     },
     {
@@ -18,7 +18,6 @@ const initialState = [
         value: 250,
         type: "range",
         minMax: [0, 500],
-        slice: "boxProperties",
 
     },
     {
@@ -27,7 +26,6 @@ const initialState = [
         value: 250,
         type: "range",
         minMax: [0, 500],
-        slice: "boxProperties",
 
     },
     {
@@ -35,7 +33,6 @@ const initialState = [
         name: "Background Color",
         value: "#fff",
         type: "color",
-        slice: "boxProperties",
 
     },
 
