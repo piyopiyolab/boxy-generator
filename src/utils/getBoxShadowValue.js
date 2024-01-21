@@ -1,6 +1,6 @@
 
 //transform shadow.inputs[{}] into string for copying the CSS code
-export default function getBoxShadowValue(shadow) {
+export default function getBoxShadowValue(shadows) {
 
     let finalString = ""
     shadows.forEach(shadow => {
@@ -16,10 +16,15 @@ export default function getBoxShadowValue(shadow) {
             if (shadow.inset) finalString += ` inset`
 
             //More than 1 shadow
-            if (shadow.indexOf(shadow) === shadow.length - 1) finalString += ";"
-            else finalString += ";"
+
+            if (shadows.indexOf(shadow) === shadows.length - 1) finalString += ";"
+            else finalString += ","
         }
 
     });
+
+
     return finalString;
 }
+
+
